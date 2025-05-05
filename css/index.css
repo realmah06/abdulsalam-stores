@@ -57,3 +57,12 @@ body{
     background-color: #040d27;
     transition: 0.45s;
 }
+@media screen and (max-width: 600px){
+ .login-container{
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    box-shadow: none;
+    margin-top: 45px;
+ }
+}

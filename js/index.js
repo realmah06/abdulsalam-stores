@@ -7,79 +7,6 @@ const togglePassword = document.getElementById('togglePassword');
     passwordField.type = this.checked ? 'text' : 'password';
   });
 
-  /*
-  document.getElementById("loginForm").addEventListener('submit', function(event){
-    event.preventDefault();
-
-
-    const username = document.getElementById("username").value.trim();
-    const password = document.getElementById("password").value.trim();
-
-    if(username === ""){
-        Swal.fire({
-            icon: 'error',
-            title: 'Something Went Wrong!',
-            text: 'Sorry, Fill in the Username Input!',
-            showCancelButton: true,
-            cancelButtonText: 'Ok'
-        });
-        return;
-    } else if (password === ""){
-        Swal.fire({
-            icon: 'error',
-            title: 'Something Went Wrong!',
-            text: 'Sorry, Fill in the Password Input!',
-            showCancelButton: true,
-            cancelButtonText: 'Ok'
-        });
-        return;
-    };
-
-    const user = {
-        name: 'Abdulsalam',
-        role: 'Proprietor',
-        v_username: 'abdul_salam',
-        v_password: 'admin@12'
-    }
-
-    Swal.fire({
-        icon: 'question',
-        title: 'Login to System ?',
-        showConfirmButton: true,
-        showCancelButton: true,
-        confirmButtonText: 'Login',
-        cancelButtonText: 'Destroy',
-        allowOutsideClick: false,
-      preConfirm: () => {
-        return new Promise((resolve) => {
-          Swal.showLoading(); // Show loading spinner
-          setTimeout(() => {
-            resolve();
-          }, 2000); // Simulate delay
-        });
-      }
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire({
-          icon: 'success',
-          title: 'Congratulations',
-          text: 'Welcome back to ADMIN Dashboard',
-          timer: 3000,
-          showConfirmButton: true,
-        }).then(() => {
-          window.location.href = 'dashboard.html';
-        });
-  } else {
-    Swal.fire({
-      icon: 'error',
-      title: 'Login Failed!',
-      text: 'Invalid Username or Password.'
-    });
-  }
-    
-
-  });*/
-
 document.getElementById("loginForm").addEventListener('submit', function(event) {
   event.preventDefault();
 
@@ -112,15 +39,22 @@ document.getElementById("loginForm").addEventListener('submit', function(event) 
     return;
   }
 
-  const user = {
+  const admin = {
     name: 'Abdulsalam',
     role: 'Proprietor',
     v_username: 'abdul_salam',
     v_password: 'admin@12'
   };
 
+  const sales = {
+    name: 'Sales Person',
+    role: 'sales',
+    v_username: 'sales',
+    v_password: 'sales@12'
+  };
+
   // Check credentials first
-  if (username !== user.v_username || password !== user.v_password) {
+  if (username !== admin.v_username || password !== admin.v_password) {
     Swal.fire({
       icon: 'error',
       title: 'Login Failed!',
@@ -128,6 +62,14 @@ document.getElementById("loginForm").addEventListener('submit', function(event) 
       cancelButtonColor: 'darkred'
     });
     return;
+  } else if (username !== sales.v_username || password !== sales.v_password){
+    Swal.fire({
+        icon: 'error',
+        title: 'Login Failed!',
+        text: 'Invalid Username or Password.',
+        cancelButtonColor: 'darkred'
+      });
+      return;
   }
 
   // Ask for confirmation to login
@@ -159,7 +101,7 @@ document.getElementById("loginForm").addEventListener('submit', function(event) 
         showConfirmButton: true,
         confirmButtonColor: '#276dc9',
       }).then(() => {
-        window.location.href = 'dashboard.html';
+        window.location.href = role+'dashboard.html';
       });
     }
   });

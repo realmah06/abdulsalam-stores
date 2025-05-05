@@ -92,7 +92,8 @@ document.getElementById("loginForm").addEventListener('submit', function(event) 
       text: 'Sorry, fill in the Username input!',
       cancelButtonText: 'Ok',
       showCancelButton: true,
-      showConfirmButton: false
+      showConfirmButton: false,
+      cancelButtonColor: 'darkred'
     });
     return;
   }
@@ -104,7 +105,8 @@ document.getElementById("loginForm").addEventListener('submit', function(event) 
       text: 'Sorry, fill in the Password input!',
       cancelButtonText: 'Ok',
       showCancelButton: true,
-      showConfirmButton: false
+      showConfirmButton: false,
+      cancelButtonColor: 'darkred'
     });
     return;
   }
@@ -121,7 +123,8 @@ document.getElementById("loginForm").addEventListener('submit', function(event) 
     Swal.fire({
       icon: 'error',
       title: 'Login Failed!',
-      text: 'Invalid Username or Password.'
+      text: 'Invalid Username or Password.',
+      cancelButtonColor: 'darkred'
     });
     return;
   }
@@ -134,6 +137,7 @@ document.getElementById("loginForm").addEventListener('submit', function(event) 
     showCancelButton: true,
     confirmButtonText: 'Login',
     cancelButtonText: 'Destroy',
+    confirmButtonColor: '#276dc9',
     allowOutsideClick: false,
     preConfirm: () => {
       return new Promise((resolve) => {

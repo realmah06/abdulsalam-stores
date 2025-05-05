@@ -31,12 +31,12 @@ body{
     font-size: 15.5px;
 }
 .login-container .form-group button{
-    padding: 8px 12px;
+    padding: 10px 13px;
     border: 1px solid #ddd;
     border-radius: 4px;
     outline: none;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 17px;
+    font-weight: 550;
     background-color: #051e61;
     color: #fff;
 }

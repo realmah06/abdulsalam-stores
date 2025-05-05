@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.login-container{
+    width: 550px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px 15px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    margin-top: 35px;
+}
+.login-container .brand{
+    padding: 5px;
+}
+.login-container .brand img{
+    height: 90px;
+    width: 110px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.login-container .brand h1{
+    font-size: 26px;
+    text-align: center;
+    color: darkred;
+    margin: 2px;
+}
+.login-container small{
+    color: darkgreen;
+    font-weight: 550;
+    font-size: 15.5px;
+}
+.login-container .form-group button{
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #051e61;
+    color: #fff;
+}
+.login-container input[type="checkbox"]{
+    margin-left: 15px;
+}
+.login-container span{
+    font-size: 16.5px;
+    color: darkslategray;
+    font-weight: 600;
+}
+.login-container a{
+    text-decoration: none;
+    float: right;
+    margin-right: 15px;
+}
+.login-container .form-group button:hover{
+    background-color: #040d27;
+    transition: 0.45s;
+}

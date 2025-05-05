@@ -138,6 +138,7 @@ document.getElementById("loginForm").addEventListener('submit', function(event) 
     confirmButtonText: 'Login',
     cancelButtonText: 'Destroy',
     confirmButtonColor: '#276dc9',
+    cancelButtonColor: 'darkred',
     allowOutsideClick: false,
     preConfirm: () => {
       return new Promise((resolve) => {
@@ -154,7 +155,8 @@ document.getElementById("loginForm").addEventListener('submit', function(event) 
         title: 'Congratulations',
         text: 'Welcome back to ADMIN Dashboard',
         timer: 3000,
-        showConfirmButton: true
+        showConfirmButton: true,
+        confirmButtonColor: '#276dc9',
       }).then(() => {
         window.location.href = 'dashboard.html';
       });

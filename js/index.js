@@ -39,16 +39,15 @@ document.getElementById("loginForm").addEventListener('submit', function(event) 
     return;
   }
 
-  const admin = {
+  const user = {
     name: 'Abdulsalam',
     role: 'Proprietor',
     v_username: 'abdul_salam',
     v_password: 'admin@12'
   };
 
-
   // Check credentials first
-  if (username !== admin.v_username || password !== admin.v_password) {
+  if (username !== user.v_username || password !== user.v_password) {
     Swal.fire({
       icon: 'error',
       title: 'Login Failed!',
@@ -56,7 +55,8 @@ document.getElementById("loginForm").addEventListener('submit', function(event) 
       cancelButtonColor: 'darkred'
     });
     return;
-  } 
+  }
+
   // Ask for confirmation to login
   Swal.fire({
     icon: 'question',

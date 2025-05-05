@@ -1,5 +1,6 @@
 const togglePassword = document.getElementById('togglePassword');
   const passwordField = document.getElementById('password');
+  const texting = document.getElementById('texting');
 
   togglePassword.addEventListener('change', function () {
     // Toggle between text and password

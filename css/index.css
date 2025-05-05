@@ -52,6 +52,7 @@ body{
     text-decoration: none;
     float: right;
     margin-right: 15px;
+    color: darkred;
 }
 .login-container .form-group button:hover{
     background-color: #040d27;

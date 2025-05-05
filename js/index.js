@@ -91,7 +91,8 @@ document.getElementById("loginForm").addEventListener('submit', function(event) 
       title: 'Something Went Wrong!',
       text: 'Sorry, fill in the Username input!',
       cancelButtonText: 'Ok',
-      showCancelButton: true
+      showCancelButton: true,
+      showConfirmButton: false
     });
     return;
   }
@@ -102,7 +103,8 @@ document.getElementById("loginForm").addEventListener('submit', function(event) 
       title: 'Something Went Wrong!',
       text: 'Sorry, fill in the Password input!',
       cancelButtonText: 'Ok',
-      showCancelButton: true
+      showCancelButton: true,
+      showConfirmButton: false
     });
     return;
   }

@@ -62,7 +62,6 @@ const togglePassword = document.getElementById('togglePassword');
     Swal.fire({
       icon: 'question',
       title: 'Login to System?',
-      text: 'Are you sure you want to proceed?',
       showConfirmButton: true,
       showCancelButton: true,
       confirmButtonText: 'Login',
@@ -82,10 +81,11 @@ const togglePassword = document.getElementById('togglePassword');
       if (result.isConfirmed) {
         Swal.fire({
           icon: 'success',
-          title: 'Welcome!',
+          title: 'Congratulations',
           text: 'Redirecting to the ADMIN Dashboard...',
           timer: 3000,
-          showConfirmButton: false
+          showConfirmButton: true,
+          confirmButtonColor: '#276dc9',
         }).then(() => {
           window.location.href = 'dashboard.html';
         });

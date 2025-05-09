@@ -82,7 +82,7 @@ const togglePassword = document.getElementById('togglePassword');
         Swal.fire({
           icon: 'success',
           title: 'Congratulations',
-          text: 'Redirecting to the ADMIN Dashboard...',
+          text: 'Welcome back to ADMIN Dashboard',
           timer: 3000,
           showConfirmButton: true,
           confirmButtonColor: '#276dc9',
